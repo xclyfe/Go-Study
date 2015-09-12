@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>List - Go Study</title>
+</head>
+<body>
+	<h2><img src="/assets/images/downloadfromcloud.png" alt="Cloud"/>List</h2>
+	<hr/>
+	<div>
+		<a href="/upload">+</a>
+	</div>
+	<table>
+		{{range $.images}}
+		<tr>
+			<td>
+				<a href="/view?id={{.|urlquery}}">{{.|html}}</a>
+			</td>
+		</tr>
+		{{end}}
+	</table>
+</body>
+</html>
